@@ -1,0 +1,145 @@
+.carparts {
+  padding: 2rem;
+  flex: 1;
+}
+
+.carparts-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.carparts-label {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #7c3aed;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+}
+
+.carparts-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f3f4f6;
+  margin: 0 0 0.5rem;
+}
+
+.carparts-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.carparts-search {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto 2rem;
+  padding: 0.65rem 1rem;
+  background-color: #1a1b24;
+  border: 1px solid #2d2f3d;
+  border-radius: 8px;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.carparts-search::placeholder {
+  color: #4b5563;
+}
+
+.carparts-search:focus {
+  border-color: #7c3aed;
+}
+
+.carparts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.carparts-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #6b7280;
+  padding: 3rem 0;
+}
+
+/* Card */
+.part-card {
+  background-color: #1a1b24;
+  border: 1px solid #2d2f3d;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.part-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: #111217;
+}
+
+.part-card-body {
+  padding: 0.85rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.part-card-type {
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.part-card-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f3f4f6;
+  margin: 0;
+}
+
+.part-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.part-card-supplier {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.part-card-category {
+  font-size: 0.75rem;
+  background-color: #3b0764;
+  color: #c084fc;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* Load more button */
+.carparts-more {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.75rem 2rem;
+  background-color: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.carparts-more:hover {
+  background-color: #6d28d9;
+}

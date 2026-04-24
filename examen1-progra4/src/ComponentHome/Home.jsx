@@ -1,14 +1,14 @@
-// estructura visual mínima
 import "./Home.css";
-import CarParts from "../ComponentCarParts/CarParts";
-import Footer from "../ComponentFooter/Footer";
 
 export default function Home() {
-    return (
-        <div className="home">
-            <h1>Bienvenido a CarParts</h1>
-            <CarParts />
-            <Footer />
-        </div>
-    );
+  return (
+    <div className="home">
+      <p className="home-label">BIENVENIDO</p>
+      <h1 className="home-title">Catálogo de Repuestos</h1>
+      <p className="home-description">
+        Encuentra los repuestos que necesitas para tu vehículo de forma rápida y sencilla.
+      </p>
+      <a href="/repuestos" className="home-cta">Ver catálogo</a>
+    </div>
+  );
 }
