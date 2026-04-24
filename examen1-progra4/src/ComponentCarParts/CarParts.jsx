@@ -5,6 +5,7 @@ const PAGE_SIZE = 10;
 
 export default function CarParts() {
   const [parts, setParts] = useState([]);
+  const [search, setSearch] = useState("");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   useEffect(() => {
@@ -21,8 +22,17 @@ export default function CarParts() {
     fetchParts();
   }, []);
 
-  const visibleParts = parts.slice(0, visibleCount);
-  const remaining = parts.length - visibleCount;
+  const filtered = parts.filter((part) =>
+    part.articleProductName.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const visibleParts = filtered.slice(0, visibleCount);
+  const remaining = filtered.length - visibleCount;
+
+  function handleSearch(e) {
+    setSearch(e.target.value);
+    setVisibleCount(PAGE_SIZE);
+  }
 
   return (
     <div className="carparts">
@@ -31,10 +41,20 @@ export default function CarParts() {
         <h1 className="carparts-title">Repuestos</h1>
         {parts.length > 0 && (
           <p className="carparts-subtitle">
-            Mostrando {visibleParts.length} de {parts.length} artículos
+            {search
+              ? `Mostrando ${filtered.length} de ${filtered.length} resultados`
+              : `Mostrando ${visibleParts.length} de ${parts.length} artículos`}
           </p>
         )}
       </div>
+
+      <input
+        type="text"
+        className="carparts-search"
+        placeholder="Buscar por nombre o código..."
+        value={search}
+        onChange={handleSearch}
+      />
 
       <div className="carparts-grid">
         {visibleParts.map((part) => (
