@@ -67,6 +67,41 @@
   padding: 3rem 0;
 }
 
+/* Estados: loading, error, empty */
+.carparts-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 4rem 1rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.carparts-state-icon {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.carparts-error {
+  color: #f87171;
+}
+
+/* Spinner */
+.carparts-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #2d2f3d;
+  border-top-color: #7c3aed;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 /* Card */
 .part-card {
   background-color: #1a1b24;
