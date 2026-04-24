@@ -1,6 +1,6 @@
+import { Outlet } from "@tanstack/react-router";
 import Navbar from "./ComponentNavbar/Navbar";
 import Footer from "./ComponentFooter/Footer";
-import Home from "./ComponentHome/Home";
 import "./App.css";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="app-layout">
       <Navbar />
       <main className="app-main">
-        <Home />
+        <Outlet />
       </main>
       <Footer />
     </div>

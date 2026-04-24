@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -5,8 +6,21 @@ export default function Navbar() {
     <nav className="navbar">
       <span className="navbar-brand">Programación IV</span>
       <div className="navbar-links">
-        <a href="/" className="nav-link">Inicio</a>
-        <a href="/repuestos" className="nav-link">Repuestos</a>
+        <Link
+          to="/"
+          className="nav-link"
+          activeProps={{ className: "nav-link active" }}
+          activeOptions={{ exact: true }}
+        >
+          Inicio
+        </Link>
+        <Link
+          to="/repuestos"
+          className="nav-link"
+          activeProps={{ className: "nav-link active" }}
+        >
+          Repuestos
+        </Link>
       </div>
     </nav>
   );

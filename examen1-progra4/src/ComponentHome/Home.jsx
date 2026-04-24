@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import "./Home.css";
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
       <p className="home-description">
         Encuentra los repuestos que necesitas para tu vehículo de forma rápida y sencilla.
       </p>
-      <a href="/repuestos" className="home-cta">Ver catálogo</a>
+      <Link to="/repuestos" className="home-cta">Ver catálogo</Link>
     </div>
   );
 }
